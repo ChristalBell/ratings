@@ -11,6 +11,7 @@ interface Props {
 const ThanksContainer = ({ selectedRating }: Props) => {
   return (
     <Box
+      className="container"
       sx={{
         backgroundColor: COLORS.navyBlue,
         color: COLORS.white,

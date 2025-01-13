@@ -22,6 +22,9 @@ const RatingsContainer = () => {
         width: "25.75rem",
         height: "26rem",
         borderRadius: "1.875rem",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       {submitted ? (
@@ -76,10 +79,9 @@ const RatingsContainer = () => {
           color: COLORS.orange,
           borderRadius: "2rem",
           height: "3rem",
-          width: "25rem",
+          width: "20rem",
           fontWeight: "bolder",
           marginTop: "2rem",
-          justifySelf: "center",
 
           "&:hover": {
             backgroundColor: COLORS.orange,

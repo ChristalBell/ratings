@@ -3,17 +3,20 @@ import Button from "@mui/material/Button";
 import React from "react";
 
 interface Props {
-  label: number;
+  rating: number;
+  setSelected: (arg1: number) => void;
+  selectedRating: number;
 }
-const RatingButton = ({ label }: Props) => {
+const RatingButton = ({ rating, setSelected, selectedRating }: Props) => {
   return (
     <Button
       sx={{
         height: "3.75rem",
         width: "3.75rem",
         borderRadius: "100%",
-        backgroundColor: COLORS.navyAccent,
-        color: COLORS.text,
+        backgroundColor:
+          rating === selectedRating ? COLORS.white : COLORS.navyAccent,
+        color: rating === selectedRating ? COLORS.orange : COLORS.text,
         padding: "none",
         marginRight: ".5rem",
         "&:hover": {
@@ -21,8 +24,9 @@ const RatingButton = ({ label }: Props) => {
           color: COLORS.navyAccent,
         },
       }}
+      onClick={() => setSelected(rating)}
     >
-      {label}
+      {rating}
     </Button>
   );
 };

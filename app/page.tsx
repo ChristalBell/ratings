@@ -1,7 +1,7 @@
+"use client";
 import RatingsContainer from "@/components/RatingsContainer";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import React from "react";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         height: "98vh",
       }}
     >
-      <RatingsContainer />
+      : <RatingsContainer />
     </Box>
   );
 };

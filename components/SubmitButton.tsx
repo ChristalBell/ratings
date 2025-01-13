@@ -12,6 +12,8 @@ const SubmitButton = () => {
         height: "3rem",
         width: "25vw",
         fontWeight: "bolder",
+        marginTop: "2rem",
+
         "&:hover": {
           backgroundColor: COLORS.orange,
           color: COLORS.white,

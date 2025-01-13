@@ -4,7 +4,8 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import RatingButton from "./RatingButton";
 import SubmitButton from "./SubmitButton";
-import { Container } from "@mui/material";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
 import { COLORS } from "@/styles/colors";
 
 const RatingsContainer = () => {
@@ -41,19 +42,30 @@ const RatingsContainer = () => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </Typography>
-      {buttons.map((button) => {
-        return <RatingButton key={button} label={button} />;
-      })}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        {buttons.map((button) => {
+          return <RatingButton key={button} label={button} />;
+        })}
+      </Box>
+      <Button
+        sx={{
+          backgroundColor: COLORS.white,
+          color: COLORS.navyAccent,
+          borderRadius: "2rem",
+          height: "3rem",
+          width: "25rem",
+          fontWeight: "bolder",
           marginTop: "2rem",
-          alignItems: "center",
+          justifySelf: "center",
+
+          "&:hover": {
+            backgroundColor: COLORS.orange,
+            color: COLORS.white,
+          },
         }}
       >
-        <SubmitButton />
-      </div>
+        Submit
+      </Button>
     </Box>
   );
 };

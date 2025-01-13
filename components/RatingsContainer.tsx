@@ -15,6 +15,7 @@ const RatingsContainer = () => {
   const buttons = [1, 2, 3, 4, 5];
   return (
     <Box
+      className="container"
       sx={{
         backgroundColor: COLORS.navyBlue,
         padding: "2rem",
